@@ -31,7 +31,7 @@ $router->map(
   '/inscription',
   [
     'method'     => 'signUp',
-    'controller' => 'signUpController'
+    'controller' => 'ConnectedController'
   ],
   'signUp'
 );
@@ -42,7 +42,7 @@ $router->map(
   '/connexion',
   [
     'method'     => 'signIn',
-    'controller' => 'signInController'
+    'controller' => 'ConnectedController'
   ],
   'signIn'
 );
@@ -53,7 +53,7 @@ $router->map(
   '/contact',
   [
     'method'     => 'contact',
-    'controller' => 'contactController'
+    'controller' => 'ContactController'
   ],
   'contact'
 );
