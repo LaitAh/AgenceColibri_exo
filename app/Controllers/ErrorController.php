@@ -14,9 +14,9 @@ class ErrorController extends CoreController {
    */
   public function error404()
   {
-      // The browser is told that the page is not found with a 404 code
-      http_response_code(404);
-      $this->show('404');
+    // The browser is told that the page is not found with a 404 code
+    http_response_code(404);
+    $this->show('404');
   }
 
 }

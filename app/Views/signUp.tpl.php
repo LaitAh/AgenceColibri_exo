@@ -11,5 +11,5 @@
     </label>
     <!-- TODO : Asked for a second verification of the password -->
   </div>
-  <input type="submit" class="submit-button" value="S'inscrire">
+  <button type="submit" class="submit-button">S'inscrire</button>
 </form>

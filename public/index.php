@@ -1,6 +1,9 @@
 <?php
 
 // Allow to load all dependencies managed by composer
+
+use Exo\Controllers\ErrorController;
+
 require __DIR__.'/../vendor/autoload.php';
 
 /* 
@@ -48,6 +51,7 @@ $router->map(
 );
 
 // --- Contact page ---
+// Route to display the contact page (GET)
 $router->map(
   'GET',
   '/contact',
@@ -56,6 +60,26 @@ $router->map(
     'controller' => 'ContactController'
   ],
   'contact'
+);
+// Rout to allow the processing of the form on the contact page (POST)
+$router->map(
+  'POST',
+  '/contact',
+  [
+    'method'     => 'newContact',
+    'controller' => 'ContactController'
+  ],
+  'contact_newContact'
+);
+// Route to display a success message after sending with success a new contact request
+$router->map(
+  'GET',
+  '/contact_success',
+  [
+    'method'     => 'contactSuccess',
+    'controller' => 'ContactController'
+  ],
+  'contact_success'
 );
 
 // **********
@@ -79,6 +103,6 @@ if($match !== false) {
 } 
 // Otherwise, $match contains false, we show to the user an error page
 else {
-  $controllerToUse = new Exo\Controllers\ErrorController;
-  $controller->error404();
+  $contoller = new Exo\Controllers\ErrorController;
+  $contoller->error404();
 }

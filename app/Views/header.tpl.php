@@ -11,8 +11,8 @@
     <nav>
         <h1>MON SUPER SITE</h1>
         <ul>
-            <li><a href="#a-definir">Connexion</a></li>
-            <li><a href="#a-definir">Inscription</a></li>
+            <li><a href="<?= $absoluteUrl ?>/connexion">Connexion</a></li>
+            <li><a href="<?= $absoluteUrl ?>/inscription">Inscription</a></li>
         </ul>
     </nav>
     <section>
