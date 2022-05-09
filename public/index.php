@@ -1,6 +1,9 @@
 <?php
 
 // Allow to load all dependencies managed by composer
+
+use Exo\Controllers\ErrorController;
+
 require __DIR__.'/../vendor/autoload.php';
 
 /* 
@@ -79,6 +82,6 @@ if($match !== false) {
 } 
 // Otherwise, $match contains false, we show to the user an error page
 else {
-  $controllerToUse = new Exo\Controllers\ErrorController;
-  $controller->error404();
+  $contoller = new Exo\Controllers\ErrorController;
+  $contoller->error404();
 }
