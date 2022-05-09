@@ -51,6 +51,7 @@ $router->map(
 );
 
 // --- Contact page ---
+// Route to display the contact page (GET)
 $router->map(
   'GET',
   '/contact',
@@ -59,6 +60,26 @@ $router->map(
     'controller' => 'ContactController'
   ],
   'contact'
+);
+// Rout to allow the processing of the form on the contact page (POST)
+$router->map(
+  'POST',
+  '/contact',
+  [
+    'method'     => 'newContact',
+    'controller' => 'ContactController'
+  ],
+  'contact_newContact'
+);
+// Route to display a success message after sending with success a new contact request
+$router->map(
+  'GET',
+  '/contact_success',
+  [
+    'method'     => 'contactSuccess',
+    'controller' => 'ContactController'
+  ],
+  'contact_success'
 );
 
 // **********
