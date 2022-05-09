@@ -10,5 +10,5 @@
       <input type="password" id="password" require>
     </label>
   </div>
-  <input type="submit" class="submit-button" value="Se connecter">
+  <button type="submit" class="submit-button">Se connecter</button>
 </form>
