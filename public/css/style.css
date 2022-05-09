@@ -70,7 +70,7 @@ label {
   margin-bottom: 10px;
 }
 
-input, textarea, button {
+input, textarea, button, .contact-success {
   display: block;
   width: 100%;
   margin-bottom: 10px;
@@ -83,6 +83,13 @@ input, textarea, button {
   font-weight: bold;
   font-size: 1.2em;
   margin: 20px auto;
+}
+
+.contact-success {
+  background-color: #C0C0C0;
+  color: black;
+  text-align: center;
+  padding: 50px 20px;
 }
 
 /* DESKTOP */
@@ -106,7 +113,7 @@ input, textarea, button {
     margin: 20px auto;
   }
 
-  form {
+  form, .contact-success {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
